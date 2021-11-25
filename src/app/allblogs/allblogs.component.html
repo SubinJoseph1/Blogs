@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="blogsAll">
+        <h1>All Blogs</h1>
+        <div class="blogs" *ngFor="let blog of blogs">
+
+            <div class="img">
+                <img src="{{blog.urlToImage}}" *ngIf="blog.urlToImage != null else img"> 
+
+                <ng-template #img>
+      
+                    <img src="../../assets/Image/Idplogo.svg">
+      
+               </ng-template>
+            </div>
+            <div class="content">
+                <p>Blog title:{{blog.title}}</p>
+                <p>Blog Description:{{blog.description}}</p>
+                <p>Blog content:{{blog.content}}</p>
+                <p>Blog publishedAt:{{blog.publishedAt}}</p>
+
+            </div>
+
+        </div>
+    </div>
+</div>

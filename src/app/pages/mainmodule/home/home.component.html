@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row" *ngFor="let blogs of blogarray.articles;let i = index">
+            <div class="col1"  *ngIf="i < 5">
+                    <img src="{{blogs.urlToImage}}">
+            </div>
+            <div class="col2"  *ngIf="i < 5">
+                <p>Blog Title:{{blogs.title}}</p>
+                <p>Blog Description:{{blogs.description}}</p>
+                <a [routerLink]="['/blog',i]">Read More</a>
+            </div>
+        </div>
+        <button type="button">View More</button>
+       
+    </div>
+</div>
